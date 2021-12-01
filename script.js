@@ -16,6 +16,13 @@ function primitiveMultiply(a, b) {
   }
 }
 
-function reliableMultiply(a, b) {}
+function reliableMultiply(a, b) {
+  try {
+    primitiveMultiply(8, 8);
+    return a * b;
+  } catch {
+    console.log("That is not the right answer.");
+  }
+}
 
 console.log(reliableMultiply(8, 8));
